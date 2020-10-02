@@ -18,6 +18,7 @@ namespace AWRestaurant.Utilities
         private string name;
         private string email;
         private string phoneNumber;
+        private string birthday;
         private string password;
         private string address;
         private string city;
@@ -27,20 +28,21 @@ namespace AWRestaurant.Utilities
         
         public Customers() {        }
 
-        public Customers(string name, string email, string phoneNumber, string password, string address, string city, string state, string zipCode)
+        public Customers(string name, string email, string phoneNumber, string birthday, string password, string address, string city, string state, string zipCode)
         {
-            createCustomer(name, email, phoneNumber, password, address, city, state, zipCode);
+            createCustomer(name, email, phoneNumber, birthday, password, address, city, state, zipCode);
         }
 
         /*
          *Creates a customer 
          *adds the customer to the database
          */
-        private int createCustomer(string name, string email, string phoneNumber, string password, string address, string city, string state, string zipCode)
+        private int createCustomer(string name, string email, string phoneNumber, string birthday, string password, string address, string city, string state, string zipCode)
         {
             this.name = name;
             this.email = email;
             this.phoneNumber = phoneNumber;
+            this.birthday = birthday;
             this.password = password;
             this.address = address;
             this.city = city;
@@ -56,6 +58,7 @@ namespace AWRestaurant.Utilities
             customerComm.Parameters.AddWithValue("@name", name);
             customerComm.Parameters.AddWithValue("@email", email);
             customerComm.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+            customerComm.Parameters.AddWithValue("@birthday", birthday);
             customerComm.Parameters.AddWithValue("@password", password);
             customerComm.Parameters.AddWithValue("@address", address);
             customerComm.Parameters.AddWithValue("@city", city);
