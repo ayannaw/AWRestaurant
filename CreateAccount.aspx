@@ -171,7 +171,15 @@
                             </div>
 
                             <div class="row">
-
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <center>
+                                        <div class="form-group">
+                                        <asp:Button ID="btnCreateAccount" runat="server" Text="Create Account" CssClass="btn btn-primary btn-block" OnClick="btnCreateAccount_Click" />
+                                    </div>
+                                    </center>
+                                </div>
+                                <div class="col-md-4"></div>
                             </div>
 
                         </div>
