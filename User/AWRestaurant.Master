@@ -1,0 +1,85 @@
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AWRestaurant.master.cs" Inherits="AWRestaurant.AWRestaurant" %>--%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="Images/food-icon.png" width="50" height="50" />
+                    AW Eats
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="collaspe navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Home.aspx">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <asp:LinkButton runat="server" ID="lbtnMyAccount" CssClass="nav-link" Text="My Account"></asp:LinkButton>
+                </li>
+                <li class="nav-item active">
+                    <asp:LinkButton runat="server" ID="lbtnLogin" CssClass="nav-link" Text="Login"></asp:LinkButton>
+                </li>
+                <li class="nav-item active">
+                    <asp:LinkButton runat="server" ID="lbtnCreateAccount" CssClass="nav-link" Text="Create Account"></asp:LinkButton>
+                </li>
+                <li class="nav-item active">
+                    <asp:LinkButton runat="server" ID="lbtnLogout" CssClass="nav-link" Text="Logout"></asp:LinkButton>
+                </li>
+                <li class="nav-item active">
+                    <asp:LinkButton runat="server" ID="lbtnHelloUser" CssClass="nav-link" Text="Hello User"></asp:LinkButton>
+                </li>
+            </ul>
+        </div>
+        <!-- Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Content Placeholder -->
+
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>AW Eats 2020</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
